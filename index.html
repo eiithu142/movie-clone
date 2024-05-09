@@ -16,23 +16,35 @@
     height: 100vh;
   }
   .container {
+   
+    
     text-align: center;
   }
   h1 {
     color: #333;
   }
   .username {
-    margin-top: 20px;
-    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 13px;
     color: #666;
+  }
+  .today{
+    width: 100%;
+  }
+  img{
+    width: 200px;
   }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>User Profile</h1>
+  <h1>Movie City</h1>
   <div class="username" id="username"></div>
+  <div class="today">
+    <img src="cartoon.jpg"><h3>Video Review Title</h3>
+    <p>Review Content goes here...</p>
+  </div>
 </div>
 
 <script>
@@ -40,7 +52,7 @@
     // Retrieve saved username from localStorage
     const savedUsername = localStorage.getItem('username');
     if (savedUsername) {
-      document.getElementById('username').textContent = `Welcome, ${savedUsername}!`;
+      document.getElementById('username').textContent = `username:( ${savedUsername}!)`;
     } else {
       // If no username is saved, redirect to the login page
       window.location.href = 'login.html';
